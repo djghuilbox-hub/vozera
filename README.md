@@ -2,7 +2,7 @@
 
 <h1 align="center">Vozera</h1>
 <p align="center"><strong>Seu estúdio de narração no Windows e no Mac.</strong><br>Transforme seus roteiros em áudio com sua conta ElevenLabs.</p>
-<p align="center"><a href="https://github.com/djghuilbox-hub/vozera/releases/download/v0.3.0-beta/Vozera-Instalador.zip"><strong>Baixar para Windows</strong></a> · <a href="https://github.com/djghuilbox-hub/vozera/releases/download/v0.3.0-beta/Vozera-macOS-Apple-Silicon.zip"><strong>Mac Apple Silicon</strong></a> · <a href="https://github.com/djghuilbox-hub/vozera/releases/download/v0.3.0-beta/Vozera-macOS-Intel.zip"><strong>Mac Intel</strong></a></p>
+<p align="center"><a href="https://github.com/djghuilbox-hub/vozera/releases/download/v0.4.0-beta/Vozera-Instalador.zip"><strong>Baixar para Windows</strong></a> · <a href="https://github.com/djghuilbox-hub/vozera/releases/download/v0.4.0-beta/Vozera-macOS-Apple-Silicon.zip"><strong>Mac Apple Silicon</strong></a> · <a href="https://github.com/djghuilbox-hub/vozera/releases/download/v0.4.0-beta/Vozera-macOS-Intel.zip"><strong>Mac Intel</strong></a></p>
 
 ## O que você pode fazer
 
@@ -10,6 +10,7 @@
 - Dividir roteiros longos em partes, ouvir o resultado e salvar cada parte ou o áudio completo.
 - Juntar arquivos de áudio, consultar a biblioteca e dar um título às narrações.
 - Acompanhar o saldo, uma estimativa de duração e uma estimativa de consumo.
+- Usar o tutorial guiado e consultar o guia de tags sempre que precisar.
 
 **Versão beta:** confira a narração completa antes de utilizá-la. A geração longa, especialmente no modelo v4 Turbo, ainda precisa de validação adicional. A estimativa de consumo não é uma cobrança confirmada.
 
@@ -19,7 +20,7 @@ Você precisa de Windows ou macOS, internet e uma conta ElevenLabs com sua próp
 
 ## Instalação no Windows
 
-1. [Baixe o instalador](https://github.com/djghuilbox-hub/vozera/releases/download/v0.3.0-beta/Vozera-Instalador.zip) e coloque `Vozera-Instalador.zip` na pasta **Downloads**.
+1. [Baixe o instalador](https://github.com/djghuilbox-hub/vozera/releases/download/v0.4.0-beta/Vozera-Instalador.zip) e coloque `Vozera-Instalador.zip` na pasta **Downloads**.
 2. Abra o menu Iniciar, procure **PowerShell** e abra-o.
 3. Copie e cole o comando abaixo no PowerShell e pressione **Enter**:
 
@@ -41,6 +42,14 @@ Você não precisa instalar Git, Python ou Claude. O Claude Code também pode aj
 4. Abra o atalho **Vozera** na Mesa ou o arquivo `Vozera.app` na pasta `Vozera/App`. Os áudios salvos ficam em `Vozera/Narrações`.
 
 O aplicativo para Mac **não possui assinatura de desenvolvedor nem notarização da Apple**. O macOS pode bloquear sua abertura: confira o aviso em **Ajustes do Sistema → Privacidade e Segurança** e, se confiar no arquivo, use a opção oferecida pelo sistema para abri-lo. As duas arquiteturas foram compiladas e testadas automaticamente no macOS 15; a instalação e o uso ainda precisam ser conferidos em Macs reais.
+
+## Tutorial e tags
+
+Ao abrir o aplicativo pela primeira vez, aparece um tutorial em seis passos. Você pode avançar, voltar ou pular. Para ver novamente, clique em **Ver tutorial**. A seção **Ajuda e tags** fica disponível no aplicativo para consulta.
+
+Tags são orientações entre colchetes, colocadas antes do trecho da narração. Por exemplo: `[curious] Como essa história começou?` ou `[whispers] Ninguém sabia do segredo.` Elas funcionam nos modelos Eleven v4, v4 Turbo e v3, mas a interpretação depende da voz e do contexto.
+
+No app, há exemplos e um pedido pronto para copiar e usar no Claude, Codex ou Gemini: a sugestão pede a inserção de tags sem reescrever o roteiro. Revise o texto antes de gerar; o uso de ferramentas externas é opcional.
 
 ## Como criar sua chave da ElevenLabs
 
