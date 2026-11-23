@@ -1,56 +1,48 @@
-# Vozera
+<p align="center"><img src="assets/vozera-logo.png" alt="Logo do Vozera" width="120"></p>
 
-> **Versão beta:** antes de usar uma narração, confira o áudio inteiro. A geração de roteiros longos, especialmente com v4 Turbo, ainda precisa de validação completa.
+<h1 align="center">Vozera</h1>
+<p align="center"><strong>Seu estúdio de narração no Windows.</strong><br>Transforme seus roteiros em áudio com sua conta ElevenLabs.</p>
+<p align="center"><a href="https://github.com/djghuilbox-hub/vozera/releases/download/v0.2.0-beta/Vozera-Instalador.zip"><strong>⬇ Baixar instalador para Windows</strong></a> · <a href="https://github.com/djghuilbox-hub/vozera/releases/tag/v0.2.0-beta">Detalhes da versão beta</a></p>
 
-[Baixar o instalador para Windows](https://github.com/djghuilbox-hub/vozera/releases/download/v0.1.0-beta/Vozera-Instalador.zip)
+## O que você pode fazer
 
-Transforme seus textos em narrações usando sua própria conta ElevenLabs. O Vozera funciona no Windows e permite escolher vozes e modelos, acompanhar o consumo estimado, gerar e baixar áudio e juntar partes em um único MP3.
+- Escolher suas vozes e modelos disponíveis na ElevenLabs e usar tags compatíveis.
+- Dividir roteiros longos em partes, ouvir o resultado e salvar cada parte ou o áudio completo.
+- Juntar arquivos de áudio, consultar a biblioteca e dar um título às narrações.
+- Acompanhar o saldo, uma estimativa de duração e uma estimativa de consumo.
 
-## Instalação
+**Versão beta:** confira a narração completa antes de utilizá-la. A geração longa, especialmente no modelo v4 Turbo, ainda precisa de validação adicional. A estimativa de consumo não é uma cobrança confirmada.
 
-1. Abra o **PowerShell** e cole o comando abaixo. O Claude Code no Windows também pode executá-lo.
+## Antes de instalar
+
+Você precisa de Windows, internet e uma conta ElevenLabs com sua própria chave de API. Há acesso inicial gratuito com limitações e opções de pagamento conforme o uso; alguns recursos, limites ou direitos comerciais podem exigir plano pago. Gerar narração consome os créditos da sua conta.
+
+## Instalação passo a passo
+
+1. [Baixe o instalador](https://github.com/djghuilbox-hub/vozera/releases/download/v0.2.0-beta/Vozera-Instalador.zip) e coloque `Vozera-Instalador.zip` na pasta **Downloads**.
+2. Abra o menu Iniciar, procure **PowerShell** e abra-o.
+3. Copie e cole o comando abaixo no PowerShell e pressione **Enter**:
 
 ```powershell
-$zip = Join-Path $env:TEMP ('Vozera-' + [guid]::NewGuid().ToString('N') + '.zip'); Invoke-WebRequest 'https://github.com/djghuilbox-hub/vozera/releases/download/v0.1.0-beta/Vozera-Instalador.zip' -OutFile $zip; if ((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash -ne '7B090BF39F1314D0C46261F982A2AB90F740E627FDAF3A280CE0A2351CB90093') { throw 'O instalador não passou na verificação de integridade.' }; $pasta = Join-Path $env:TEMP ('Vozera-' + [guid]::NewGuid().ToString('N')); Expand-Archive -LiteralPath $zip -DestinationPath $pasta; powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $pasta 'Instalar.ps1')
+$zip = Join-Path $env:USERPROFILE 'Downloads\Vozera-Instalador.zip'; if (!(Test-Path -LiteralPath $zip)) { throw 'Coloque o ZIP na pasta Downloads e tente novamente.' }; $pasta = Join-Path $env:TEMP ('Vozera-' + [guid]::NewGuid().ToString('N')); Expand-Archive -LiteralPath $zip -DestinationPath $pasta; powershell.exe -STA -NoProfile -ExecutionPolicy Bypass -File (Join-Path $pasta 'Instalar.ps1')
 ```
 
-2. Se preferir, [baixe o ZIP](https://github.com/djghuilbox-hub/vozera/releases/download/v0.1.0-beta/Vozera-Instalador.zip), salve na pasta Downloads e siga o arquivo **COMO INSTALAR.txt** que vem dentro dele.
-3. Se o instalador pedir para instalar o FFmpeg, acompanhe as mensagens na tela. O FFmpeg é necessário para juntar os áudios.
-4. Ao concluir, abra **Vozera** pela Área de Trabalho. Mantenha a janela do aplicativo aberta durante o uso.
+4. Pressione **Enter** para instalar em `C:\Vozera` ou digite **2** para escolher outra pasta no Explorador.
+5. Acompanhe as etapas e aceite eventuais solicitações de instalação do FFmpeg, necessário para juntar os áudios. Em alguns computadores, pode ser necessário abrir o PowerShell como administrador para criar a pasta em `C:\`.
+6. Abra o atalho **Vozera** na Área de Trabalho. As narrações salvas vão para `C:\Vozera\Narrações` ou para a pasta escolhida na instalação.
 
-Você não precisa instalar Git nem Python. O aplicativo abre no navegador, mas roda localmente no seu computador. É necessário acesso à internet para conectar à ElevenLabs e gerar narrações.
+Você não precisa instalar Git, Python ou Claude. O Claude Code também pode ajudar a executar o instalador no Windows.
 
-## Primeiro acesso: chave da ElevenLabs
+## Como criar sua chave da ElevenLabs
 
-1. Crie uma conta ou entre na ElevenLabs e abra a página de chaves de API.
-2. Crie uma chave com um nome que ajude você a identificá-la.
-3. Libere **Text to Speech** e leitura de **Voices**. Para ver saldo e histórico, libere também leitura de **User/Subscription** e **History**, quando disponíveis. Os nomes podem variar na interface.
-4. Copie a chave, cole no Vozera e clique em **Conectar**. A chave fica protegida na sua conta do Windows. Não compartilhe esse código.
+1. Entre na sua conta e acesse a [página de chaves de API](https://elevenlabs.io/app/api/api-keys).
+2. Crie uma chave e copie o código. Nas permissões, habilite **Text to Speech** e a leitura de **Voices**; para saldo e histórico, habilite também a leitura de **User/Subscription** e **History**, quando disponíveis.
+3. No Vozera, cole a chave e clique em **Conectar**. Os nomes das permissões podem mudar; o app oferece um tutorial na própria tela.
 
-Há acesso inicial gratuito, com limitações, e também há pagamento conforme o uso. Um plano pago pode ser necessário para determinados recursos, limites ou direitos comerciais. Verifique as condições da sua conta antes de usar o áudio em projetos comerciais.
+A chave é protegida pelo Windows no seu computador. Não compartilhe sua chave com outras pessoas.
 
-## Como usar
+## Precisa de ajuda?
 
-1. Informe um título e cole o roteiro.
-2. Escolha uma voz e um modelo. Confira a estimativa de duração e consumo.
-3. Clique em **Gerar narração** e aguarde. A geração usa os créditos da sua conta ElevenLabs; os valores mostrados antes da geração são estimativas.
-4. Baixe cada parte separadamente ou o MP3 unido. Você também pode encontrar os arquivos completos na biblioteca local.
+Se a instalação do FFmpeg não funcionar, confira as mensagens no terminal e tente novamente. Se o áudio for interrompido, salve as partes já geradas e confira o histórico da ElevenLabs antes de tentar outra geração: a tentativa anterior pode ter consumido créditos. O aplicativo precisa de internet para acessar a ElevenLabs.
 
-Em **Juntar áudios**, você pode selecionar arquivos já existentes na ordem desejada e criar um novo MP3. Essa união é feita no seu computador e não usa créditos de geração.
-
-## Perguntas frequentes
-
-**O Claude precisa estar instalado?** Não. O Claude Code é apenas uma forma opcional de executar o comando de instalação.
-
-**É preciso clonar este repositório?** Não. Basta obter o arquivo de instalação e seguir os passos acima.
-
-**Posso usar minha própria chave?** Sim. Cada pessoa usa a chave da própria conta. O instalador não contém uma chave compartilhada.
-
-**O tempo e o consumo são exatos?** São estimativas antes da geração e podem variar conforme voz, modelo, plano e pausas. Revise o áudio completo antes de usá-lo em um vídeo.
-
-**O áudio parece incompleto?** Baixe as partes disponíveis e confira o conteúdo antes de gerar novamente. Uma nova tentativa pode consumir créditos. Se o aplicativo não conseguir uni-las, use **Juntar áudios** depois de salvá-las.
-
-## Uso e distribuição
-
-A distribuição ou venda do aplicativo sem autorização do responsável não é permitida. Vozera é independente e não é um produto oficial da ElevenLabs.
-
+O Vozera é uma ferramenta independente e utiliza a API da ElevenLabs. Os arquivos aqui são de distribuição; o código-fonte do aplicativo não está neste repositório público.
