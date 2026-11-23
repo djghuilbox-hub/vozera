@@ -1,8 +1,8 @@
 <p align="center"><img src="assets/vozera-logo.png" alt="Logo do Vozera" width="120"></p>
 
 <h1 align="center">Vozera</h1>
-<p align="center"><strong>Seu estúdio de narração no Windows.</strong><br>Transforme seus roteiros em áudio com sua conta ElevenLabs.</p>
-<p align="center"><a href="https://github.com/djghuilbox-hub/vozera/releases/download/v0.2.0-beta/Vozera-Instalador.zip"><strong>⬇ Baixar instalador para Windows</strong></a> · <a href="https://github.com/djghuilbox-hub/vozera/releases/tag/v0.2.0-beta">Detalhes da versão beta</a></p>
+<p align="center"><strong>Seu estúdio de narração no Windows e no Mac.</strong><br>Transforme seus roteiros em áudio com sua conta ElevenLabs.</p>
+<p align="center"><a href="https://github.com/djghuilbox-hub/vozera/releases/download/v0.3.0-beta/Vozera-Instalador.zip"><strong>Baixar para Windows</strong></a> · <a href="https://github.com/djghuilbox-hub/vozera/releases/download/v0.3.0-beta/Vozera-macOS-Apple-Silicon.zip"><strong>Mac Apple Silicon</strong></a> · <a href="https://github.com/djghuilbox-hub/vozera/releases/download/v0.3.0-beta/Vozera-macOS-Intel.zip"><strong>Mac Intel</strong></a></p>
 
 ## O que você pode fazer
 
@@ -15,11 +15,11 @@
 
 ## Antes de instalar
 
-Você precisa de Windows, internet e uma conta ElevenLabs com sua própria chave de API. Há acesso inicial gratuito com limitações e opções de pagamento conforme o uso; alguns recursos, limites ou direitos comerciais podem exigir plano pago. Gerar narração consome os créditos da sua conta.
+Você precisa de Windows ou macOS, internet e uma conta ElevenLabs com sua própria chave de API. Há acesso inicial gratuito com limitações e opções de pagamento conforme o uso; alguns recursos, limites ou direitos comerciais podem exigir plano pago. Gerar narração consome os créditos da sua conta.
 
-## Instalação passo a passo
+## Instalação no Windows
 
-1. [Baixe o instalador](https://github.com/djghuilbox-hub/vozera/releases/download/v0.2.0-beta/Vozera-Instalador.zip) e coloque `Vozera-Instalador.zip` na pasta **Downloads**.
+1. [Baixe o instalador](https://github.com/djghuilbox-hub/vozera/releases/download/v0.3.0-beta/Vozera-Instalador.zip) e coloque `Vozera-Instalador.zip` na pasta **Downloads**.
 2. Abra o menu Iniciar, procure **PowerShell** e abra-o.
 3. Copie e cole o comando abaixo no PowerShell e pressione **Enter**:
 
@@ -33,13 +33,22 @@ $zip = Join-Path $env:USERPROFILE 'Downloads\Vozera-Instalador.zip'; if (!(Test-
 
 Você não precisa instalar Git, Python ou Claude. O Claude Code também pode ajudar a executar o instalador no Windows.
 
+## Instalação no Mac
+
+1. No menu Apple, clique em **Sobre Este Mac** e confira o processador. Se aparecer Apple M1, M2, M3 ou outro chip Apple, baixe a versão **Apple Silicon**; se aparecer Intel, baixe a versão **Intel**.
+2. Extraia o ZIP baixado, abra a pasta extraída e execute **Instalar Vozera.command**. Siga as orientações no terminal e escolha onde criar a pasta Vozera. O padrão é `~/Vozera`.
+3. O FFmpeg é necessário para juntar áudios. Se ele não estiver instalado, o instalador usará o Homebrew. Se o Homebrew também não estiver instalado, acesse [brew.sh](https://brew.sh/), conclua a instalação e execute o instalador do Vozera novamente.
+4. Abra o atalho **Vozera** na Mesa ou o arquivo `Vozera.app` na pasta `Vozera/App`. Os áudios salvos ficam em `Vozera/Narrações`.
+
+O aplicativo para Mac **não possui assinatura de desenvolvedor nem notarização da Apple**. O macOS pode bloquear sua abertura: confira o aviso em **Ajustes do Sistema → Privacidade e Segurança** e, se confiar no arquivo, use a opção oferecida pelo sistema para abri-lo. As duas arquiteturas foram compiladas e testadas automaticamente no macOS 15; a instalação e o uso ainda precisam ser conferidos em Macs reais.
+
 ## Como criar sua chave da ElevenLabs
 
 1. Entre na sua conta e acesse a [página de chaves de API](https://elevenlabs.io/app/api/api-keys).
 2. Crie uma chave e copie o código. Nas permissões, habilite **Text to Speech** e a leitura de **Voices**; para saldo e histórico, habilite também a leitura de **User/Subscription** e **History**, quando disponíveis.
 3. No Vozera, cole a chave e clique em **Conectar**. Os nomes das permissões podem mudar; o app oferece um tutorial na própria tela.
 
-A chave é protegida pelo Windows no seu computador. Não compartilhe sua chave com outras pessoas.
+A chave é protegida pelo Windows ou armazenada no Acesso às Chaves do macOS. Não compartilhe sua chave com outras pessoas.
 
 ## Precisa de ajuda?
 
