@@ -1,19 +1,20 @@
 # Vozera
 
-> **Versão em preparação:** o instalador ainda não foi publicado neste repositório. Aguarde a disponibilização antes de seguir a instalação. Revise a narração, especialmente em roteiros longos com v4 Turbo, enquanto o fluxo passa por testes.
+> **Versão beta:** antes de usar uma narração, confira o áudio inteiro. A geração de roteiros longos, especialmente com v4 Turbo, ainda precisa de validação completa.
 
+[Baixar o instalador para Windows](https://github.com/djghuilbox-hub/vozera/releases/download/v0.1.0-beta/Vozera-Instalador.zip)
 
 Transforme seus textos em narrações usando sua própria conta ElevenLabs. O Vozera funciona no Windows e permite escolher vozes e modelos, acompanhar o consumo estimado, gerar e baixar áudio e juntar partes em um único MP3.
 
 ## Instalação
 
-1. Baixe o arquivo `Vozera-Instalador.zip` e salve-o na pasta **Downloads**.
-2. Abra o **PowerShell** e cole o comando abaixo. O Claude Code no Windows também pode executá-lo para você.
+1. Abra o **PowerShell** e cole o comando abaixo. O Claude Code no Windows também pode executá-lo.
 
 ```powershell
-$zip = Join-Path $env:USERPROFILE 'Downloads\Vozera-Instalador.zip'; if (!(Test-Path -LiteralPath $zip)) { throw 'Coloque o ZIP na pasta Downloads e tente novamente.' }; $pasta = Join-Path $env:TEMP ('Vozera-' + [guid]::NewGuid().ToString('N')); Expand-Archive -LiteralPath $zip -DestinationPath $pasta; powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $pasta 'Instalar.ps1')
+$zip = Join-Path $env:TEMP ('Vozera-' + [guid]::NewGuid().ToString('N') + '.zip'); Invoke-WebRequest 'https://github.com/djghuilbox-hub/vozera/releases/download/v0.1.0-beta/Vozera-Instalador.zip' -OutFile $zip; if ((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash -ne '7B090BF39F1314D0C46261F982A2AB90F740E627FDAF3A280CE0A2351CB90093') { throw 'O instalador não passou na verificação de integridade.' }; $pasta = Join-Path $env:TEMP ('Vozera-' + [guid]::NewGuid().ToString('N')); Expand-Archive -LiteralPath $zip -DestinationPath $pasta; powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $pasta 'Instalar.ps1')
 ```
 
+2. Se preferir, [baixe o ZIP](https://github.com/djghuilbox-hub/vozera/releases/download/v0.1.0-beta/Vozera-Instalador.zip), salve na pasta Downloads e siga o arquivo **COMO INSTALAR.txt** que vem dentro dele.
 3. Se o instalador pedir para instalar o FFmpeg, acompanhe as mensagens na tela. O FFmpeg é necessário para juntar os áudios.
 4. Ao concluir, abra **Vozera** pela Área de Trabalho. Mantenha a janela do aplicativo aberta durante o uso.
 
