@@ -42,7 +42,7 @@ Você precisa de Windows ou macOS, internet e uma conta ElevenLabs com sua próp
 
 ## Instalação no Mac
 
-1. No menu Apple, clique em **Sobre Este Mac** e confira o processador. Se aparecer Apple M1, M2, M3 ou outro chip Apple, baixe a versão **Apple Silicon**; se aparecer Intel, baixe a versão **Intel**.
+1. No menu Apple, clique em **Sobre Este Mac** e confira o processador. Se aparecer Apple M1, M2, M3 ou outro chip Apple, baixe a versão [Mac Apple Silicon](https://github.com/djghuilbox-hub/vozera/releases/download/v0.6.0-beta/Vozera-macOS-Apple-Silicon.zip); se aparecer Intel, baixe a versão [Mac Intel](https://github.com/djghuilbox-hub/vozera/releases/download/v0.6.0-beta/Vozera-macOS-Intel.zip).
 2. Extraia o ZIP baixado, abra a pasta extraída e execute **Instalar Vozera.command**. Siga as orientações no terminal e escolha onde criar a pasta Vozera. O padrão é `~/Vozera`.
 3. O FFmpeg é necessário para juntar áudios. Se ele não estiver instalado, o instalador usará o Homebrew. Se o Homebrew também não estiver instalado, acesse [brew.sh](https://brew.sh/), conclua a instalação e execute o instalador do Vozera novamente.
 4. Abra o atalho **Vozera** na Mesa ou o arquivo `Vozera.app` na pasta `Vozera/App`. Os áudios salvos ficam em `Vozera/Narrações`.
