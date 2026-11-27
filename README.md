@@ -35,7 +35,7 @@ O comando baixa a versão mais recente disponível, inclusive versões beta, e v
 - Criar e renomear canais locais, abrir o histórico de cada canal e salvar voz ou modelo como configuração padrão.
 - Conferir o roteiro antes de gerar, receber alertas de repetição e acompanhar o progresso.
 - Configurar a ElevenLabs em Configurações → Plugins e diagnosticar problemas pelo botão Verificar.
-- Receber um aviso destacado quando houver uma nova versão e consultar as novidades no aplicativo.
+- Ver a versão instalada no cabeçalho e receber um aviso destacado quando houver uma nova versão.
 - Receber um aviso quando a aba perder a conexão com o aplicativo local.
 
 **Versão beta:** confira a narração completa antes de utilizá-la. A geração longa, especialmente no modelo v4 Turbo, ainda precisa de validação adicional. A estimativa de consumo não é uma cobrança confirmada.
@@ -58,7 +58,7 @@ curl -fsSL https://raw.githubusercontent.com/djghuilbox-hub/vozera/main/instalar
 5. O FFmpeg é necessário para juntar áudios. Se não estiver instalado, o instalador usará o Homebrew. Se o Homebrew também não estiver instalado, acesse [brew.sh](https://brew.sh/), conclua a instalação e execute o comando novamente.
 6. Abra o atalho **Vozera** na Mesa ou o arquivo `Vozera.app` na pasta `Vozera/App`. Os áudios ficam em `Vozera/Narrações`.
 
-O comando executa o script público deste repositório: use-o somente se confiar na origem. Se preferir baixar o arquivo, consulte os [instaladores para Mac](https://github.com/djghuilbox-hub/vozera/releases/tag/v0.9.0-beta).
+O comando executa o script público deste repositório: use-o somente se confiar na origem. Se preferir baixar o arquivo, consulte os [instaladores para Mac](https://github.com/djghuilbox-hub/vozera/releases/tag/v0.9.1-beta).
 
 O aplicativo para Mac **não possui assinatura de desenvolvedor nem notarização da Apple**. O macOS pode bloquear sua abertura: confira o aviso em **Ajustes do Sistema → Privacidade e Segurança** e, se confiar no arquivo, use a opção oferecida pelo sistema para abri-lo. As duas arquiteturas foram compiladas e testadas automaticamente no macOS 15; a instalação e o uso ainda precisam ser conferidos em Macs reais.
 
