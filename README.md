@@ -58,7 +58,9 @@ No app, há exemplos e um pedido pronto para copiar e usar no Claude, Codex ou G
 
 ## Atualizar uma instalação existente
 
-O Vozera verifica automaticamente as versões publicadas e apresenta as novidades. A instalação da atualização ainda é manual. Feche o Vozera, baixe o instalador para seu sistema e siga novamente as instruções, escolhendo a mesma pasta usada anteriormente. A biblioteca e a chave permanecem no computador. Em caso de dúvida, faça uma cópia de segurança dos seus dados antes de reinstalar.
+No Windows, você pode atualizar sem baixar o ZIP manualmente: abra o PowerShell e use o comando do [guia de atualização](https://github.com/djghuilbox-hub/vozera/releases/tag/v0.6.0-beta). Ele baixa e confere a versão mais recente antes de iniciar o instalador. No Mac, o mesmo guia traz os passos para baixar e instalar a versão correta.
+
+Feche o Vozera antes de atualizar e escolha a mesma pasta da instalação anterior para manter o local das narrações. A chave e a biblioteca continuam salvas no computador. A atualização ainda não é instalada automaticamente pelo botão dentro do app.
 
 ## Como criar sua chave da ElevenLabs
 
