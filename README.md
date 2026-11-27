@@ -25,19 +25,18 @@ Você precisa de Windows ou macOS, internet e uma conta ElevenLabs com sua próp
 
 ## Instalação no Windows
 
-1. [Baixe o instalador](https://github.com/djghuilbox-hub/vozera/releases/download/v0.6.0-beta/Vozera-Instalador.zip) e coloque `Vozera-Instalador.zip` na pasta **Downloads**.
-2. Abra o menu Iniciar, procure **PowerShell** e abra-o.
-3. Copie e cole o comando abaixo no PowerShell e pressione **Enter**:
+1. Abra o menu Iniciar, procure **PowerShell** e abra-o.
+2. Copie e cole o comando abaixo e pressione **Enter**:
 
 ```powershell
-$zip = Join-Path $env:USERPROFILE 'Downloads\Vozera-Instalador.zip'; if (!(Test-Path -LiteralPath $zip)) { throw 'Coloque o ZIP na pasta Downloads e tente novamente.' }; $pasta = Join-Path $env:TEMP ('Vozera-' + [guid]::NewGuid().ToString('N')); Expand-Archive -LiteralPath $zip -DestinationPath $pasta; powershell.exe -STA -NoProfile -ExecutionPolicy Bypass -File (Join-Path $pasta 'Instalar.ps1')
+irm https://raw.githubusercontent.com/djghuilbox-hub/vozera/main/atualizar.ps1 | iex
 ```
 
-4. Pressione **Enter** para instalar em `C:\Vozera` ou digite **2** para escolher outra pasta no Explorador.
-5. Acompanhe as etapas e aceite eventuais solicitações de instalação do FFmpeg, necessário para juntar os áudios. Em alguns computadores, pode ser necessário abrir o PowerShell como administrador para criar a pasta em `C:\`.
-6. Abra o atalho **Vozera** na Área de Trabalho. As narrações salvas vão para `C:\Vozera\Narrações` ou para a pasta escolhida na instalação.
+3. Aguarde o download e a verificação do instalador. Em seguida, pressione **Enter** para instalar em `C:\Vozera` ou digite **2** para escolher outro local no Explorador.
+4. Acompanhe as etapas e aceite eventuais solicitações de instalação do FFmpeg, necessário para juntar os áudios. Em alguns computadores, pode ser necessário abrir o PowerShell como administrador para criar a pasta em `C:\`.
+5. Abra o atalho **Vozera** na Área de Trabalho. As narrações ficam em `C:\Vozera\Narrações` ou no local escolhido.
 
-Você não precisa instalar Git, Python ou Claude. O Claude Code também pode ajudar a executar o instalador no Windows.
+O comando baixa a versão mais recente disponível, inclusive versões beta, e verifica a integridade do arquivo antes de iniciar o instalador. Ele executa o script público deste repositório: use-o somente se confiar na origem. Você não precisa instalar Git, Python ou Claude.
 
 ## Instalação no Mac
 
@@ -58,9 +57,11 @@ No app, há exemplos e um pedido pronto para copiar e usar no Claude, Codex ou G
 
 ## Atualizar uma instalação existente
 
-No Windows, você pode atualizar sem baixar o ZIP manualmente: abra o PowerShell e use o comando do [guia de atualização](https://github.com/djghuilbox-hub/vozera/releases/tag/v0.6.0-beta). Ele baixa e confere a versão mais recente antes de iniciar o instalador. No Mac, o mesmo guia traz os passos para baixar e instalar a versão correta.
+No Windows, feche o Vozera e seu terminal e siga o mesmo comando da seção [Instalação no Windows](#instalação-no-windows). Escolha o mesmo local da instalação anterior: para o padrão `C:\Vozera`, pressione **Enter**; se escolheu outro local, digite **2** e selecione a pasta que contém a pasta Vozera.
 
-Feche o Vozera antes de atualizar e escolha a mesma pasta da instalação anterior para manter o local das narrações. A chave e a biblioteca continuam salvas no computador. A atualização ainda não é instalada automaticamente pelo botão dentro do app.
+No Mac, siga o [guia de atualização](https://github.com/djghuilbox-hub/vozera/releases/tag/v0.6.0-beta) para baixar e instalar a versão correta.
+
+A chave e a biblioteca continuam salvas no computador. A atualização ainda não é instalada automaticamente pelo botão dentro do app.
 
 ## Como criar sua chave da ElevenLabs
 
