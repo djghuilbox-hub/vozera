@@ -29,7 +29,9 @@ O comando baixa a versão mais recente disponível, inclusive versões beta, e v
 - Acompanhar o saldo, uma estimativa de duração e uma estimativa de consumo.
 - Usar o tutorial guiado e consultar o guia de tags sempre que precisar.
 - Navegar pelas seções e consultar o histórico local por canal, voz e modelo.
-- Criar canais locais e salvar configurações de voz e modelo para reutilizar.
+- Ver, copiar ou reabrir roteiros salvos; cada nova geração guarda o MP3 e o TXT na pasta de narrações.
+- Identificar roteiros já gerados antes de enviar novamente e consultar os avisos no Início.
+- Criar canais locais, inclusive direto no Estúdio, e salvar voz e modelo para reutilizar.
 - Conferir o roteiro antes de gerar, receber alertas de repetição e acompanhar o progresso.
 - Configurar a ElevenLabs em Configurações → Plugins e diagnosticar problemas pelo botão Verificar.
 - Consultar automaticamente novas versões e visualizar as novidades no aplicativo.
@@ -42,7 +44,7 @@ Você precisa de Windows ou macOS, internet e uma conta ElevenLabs com sua próp
 
 ## Instalação no Mac
 
-1. No menu Apple, clique em **Sobre Este Mac** e confira o processador. Se aparecer Apple M1, M2, M3 ou outro chip Apple, baixe a versão [Mac Apple Silicon](https://github.com/djghuilbox-hub/vozera/releases/download/v0.6.0-beta/Vozera-macOS-Apple-Silicon.zip); se aparecer Intel, baixe a versão [Mac Intel](https://github.com/djghuilbox-hub/vozera/releases/download/v0.6.0-beta/Vozera-macOS-Intel.zip).
+1. No menu Apple, clique em **Sobre Este Mac** e confira o processador. Se aparecer Apple M1, M2, M3 ou outro chip Apple, baixe a versão [Mac Apple Silicon](https://github.com/djghuilbox-hub/vozera/releases/download/v0.7.0-beta/Vozera-macOS-Apple-Silicon.zip); se aparecer Intel, baixe a versão [Mac Intel](https://github.com/djghuilbox-hub/vozera/releases/download/v0.7.0-beta/Vozera-macOS-Intel.zip).
 2. Extraia o ZIP baixado, abra a pasta extraída e execute **Instalar Vozera.command**. Siga as orientações no terminal e escolha onde criar a pasta Vozera. O padrão é `~/Vozera`.
 3. O FFmpeg é necessário para juntar áudios. Se ele não estiver instalado, o instalador usará o Homebrew. Se o Homebrew também não estiver instalado, acesse [brew.sh](https://brew.sh/), conclua a instalação e execute o instalador do Vozera novamente.
 4. Abra o atalho **Vozera** na Mesa ou o arquivo `Vozera.app` na pasta `Vozera/App`. Os áudios salvos ficam em `Vozera/Narrações`.
@@ -61,9 +63,9 @@ No app, há exemplos e um pedido pronto para copiar e usar no Claude, Codex ou G
 
 No Windows, feche o Vozera e seu terminal e siga o mesmo comando da seção [Instalação no Windows](#instalação-no-windows). Escolha o mesmo local da instalação anterior: para o padrão `C:\Vozera`, pressione **Enter**; se escolheu outro local, digite **2** e selecione a pasta que contém a pasta Vozera.
 
-No Mac, siga o [guia de atualização](https://github.com/djghuilbox-hub/vozera/releases/tag/v0.6.0-beta) para baixar e instalar a versão correta.
+No Mac, siga o [guia de atualização](https://github.com/djghuilbox-hub/vozera/releases/tag/v0.7.0-beta) para baixar e instalar a versão correta.
 
-A chave e a biblioteca continuam salvas no computador. A atualização ainda não é instalada automaticamente pelo botão dentro do app.
+A chave e a biblioteca continuam salvas no computador. A atualização ainda não é instalada automaticamente pelo botão dentro do app. Roteiros antigos que não foram guardados pela versão anterior podem não estar disponíveis no histórico local.
 
 ## Como criar sua chave da ElevenLabs
 
