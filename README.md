@@ -29,9 +29,10 @@ O comando baixa a versão mais recente disponível, inclusive versões beta, e v
 - Acompanhar o saldo, uma estimativa de duração e uma estimativa de consumo.
 - Usar o tutorial guiado e consultar o guia de tags sempre que precisar.
 - Navegar pelas seções e consultar o histórico local por canal, voz e modelo.
-- Ver, copiar ou reabrir roteiros salvos; cada nova geração guarda o MP3 e o TXT na pasta de narrações.
+- Ver, copiar ou reabrir roteiros salvos com resumo de voz, modelo, canal e data.
+- Guardar automaticamente o MP3 e o TXT de cada nova narração em sua própria pasta.
 - Identificar roteiros já gerados antes de enviar novamente e consultar os avisos no Início.
-- Criar canais locais, inclusive direto no Estúdio, e salvar voz e modelo para reutilizar.
+- Criar e renomear canais locais, abrir o histórico de cada canal e salvar voz ou modelo como configuração padrão.
 - Conferir o roteiro antes de gerar, receber alertas de repetição e acompanhar o progresso.
 - Configurar a ElevenLabs em Configurações → Plugins e diagnosticar problemas pelo botão Verificar.
 - Receber um aviso destacado quando houver uma nova versão e consultar as novidades no aplicativo.
@@ -57,9 +58,17 @@ curl -fsSL https://raw.githubusercontent.com/djghuilbox-hub/vozera/main/instalar
 5. O FFmpeg é necessário para juntar áudios. Se não estiver instalado, o instalador usará o Homebrew. Se o Homebrew também não estiver instalado, acesse [brew.sh](https://brew.sh/), conclua a instalação e execute o comando novamente.
 6. Abra o atalho **Vozera** na Mesa ou o arquivo `Vozera.app` na pasta `Vozera/App`. Os áudios ficam em `Vozera/Narrações`.
 
-O comando executa o script público deste repositório: use-o somente se confiar na origem. Se preferir baixar o arquivo, consulte os [instaladores para Mac](https://github.com/djghuilbox-hub/vozera/releases/tag/v0.8.0-beta).
+O comando executa o script público deste repositório: use-o somente se confiar na origem. Se preferir baixar o arquivo, consulte os [instaladores para Mac](https://github.com/djghuilbox-hub/vozera/releases/tag/v0.9.0-beta).
 
 O aplicativo para Mac **não possui assinatura de desenvolvedor nem notarização da Apple**. O macOS pode bloquear sua abertura: confira o aviso em **Ajustes do Sistema → Privacidade e Segurança** e, se confiar no arquivo, use a opção oferecida pelo sistema para abri-lo. As duas arquiteturas foram compiladas e testadas automaticamente no macOS 15; a instalação e o uso ainda precisam ser conferidos em Macs reais.
+
+## Canais e roteiros
+
+Os canais do Vozera são locais: eles organizam suas narrações, mas não se conectam ao YouTube. Em **Início → Seus canais**, crie ou abra um canal para consultar seu histórico e salvar a voz e o modelo. No Estúdio, ao selecionar esse canal, as opções salvas são aplicadas quando estão disponíveis na sua conta.
+
+Nas narrações recentes ou na Biblioteca, clique em **Ver roteiro** para conferir o texto e as informações da geração. Para editar e usar o roteiro novamente, clique em **Abrir no Estúdio**. Alguns registros antigos não guardaram o texto ou os identificadores de voz e modelo; nesses casos, confira ou escolha as opções antes de gerar.
+
+Cada nova geração salva uma pasta própria dentro da pasta de narrações, com o MP3 e o TXT. Os arquivos anteriores continuam nos locais onde foram salvos.
 
 ## Tutorial e tags
 
