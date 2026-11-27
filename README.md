@@ -45,10 +45,19 @@ Você precisa de Windows ou macOS, internet e uma conta ElevenLabs com sua próp
 
 ## Instalação no Mac
 
-1. No menu Apple, clique em **Sobre Este Mac** e confira o processador. Se aparecer Apple M1, M2, M3 ou outro chip Apple, baixe a versão [Mac Apple Silicon](https://github.com/djghuilbox-hub/vozera/releases/download/v0.8.0-beta/Vozera-macOS-Apple-Silicon.zip); se aparecer Intel, baixe a versão [Mac Intel](https://github.com/djghuilbox-hub/vozera/releases/download/v0.8.0-beta/Vozera-macOS-Intel.zip).
-2. Extraia o ZIP baixado, abra a pasta extraída e execute **Instalar Vozera.command**. Siga as orientações no terminal e escolha onde criar a pasta Vozera. O padrão é `~/Vozera`.
-3. O FFmpeg é necessário para juntar áudios. Se ele não estiver instalado, o instalador usará o Homebrew. Se o Homebrew também não estiver instalado, acesse [brew.sh](https://brew.sh/), conclua a instalação e execute o instalador do Vozera novamente.
-4. Abra o atalho **Vozera** na Mesa ou o arquivo `Vozera.app` na pasta `Vozera/App`. Os áudios salvos ficam em `Vozera/Narrações`.
+1. Abra **Aplicativos → Utilitários → Terminal**.
+2. Copie o comando abaixo, cole no Terminal e pressione **Enter**:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/djghuilbox-hub/vozera/main/instalar-mac.sh | bash
+```
+
+3. O comando identifica o processador, baixa a versão mais recente do Vozera, inclusive versões beta, e confere a integridade do instalador antes de iniciá-lo.
+4. Pressione **Enter** para criar a pasta padrão `~/Vozera` ou digite **2** para escolher outro local. Para atualizar, feche o Vozera antes e escolha o mesmo local da instalação anterior.
+5. O FFmpeg é necessário para juntar áudios. Se não estiver instalado, o instalador usará o Homebrew. Se o Homebrew também não estiver instalado, acesse [brew.sh](https://brew.sh/), conclua a instalação e execute o comando novamente.
+6. Abra o atalho **Vozera** na Mesa ou o arquivo `Vozera.app` na pasta `Vozera/App`. Os áudios ficam em `Vozera/Narrações`.
+
+O comando executa o script público deste repositório: use-o somente se confiar na origem. Se preferir baixar o arquivo, consulte os [instaladores para Mac](https://github.com/djghuilbox-hub/vozera/releases/tag/v0.8.0-beta).
 
 O aplicativo para Mac **não possui assinatura de desenvolvedor nem notarização da Apple**. O macOS pode bloquear sua abertura: confira o aviso em **Ajustes do Sistema → Privacidade e Segurança** e, se confiar no arquivo, use a opção oferecida pelo sistema para abri-lo. As duas arquiteturas foram compiladas e testadas automaticamente no macOS 15; a instalação e o uso ainda precisam ser conferidos em Macs reais.
 
@@ -64,7 +73,7 @@ No app, há exemplos e um pedido pronto para copiar e usar no Claude, Codex ou G
 
 No Windows, feche o Vozera e seu terminal e siga o mesmo comando da seção [Instalação no Windows](#instalação-no-windows). Escolha o mesmo local da instalação anterior: para o padrão `C:\Vozera`, pressione **Enter**; se escolheu outro local, digite **2** e selecione a pasta que contém a pasta Vozera.
 
-No Mac, siga o [guia de atualização](https://github.com/djghuilbox-hub/vozera/releases/tag/v0.8.0-beta) para baixar e instalar a versão correta.
+No Mac, feche o Vozera e seu terminal e siga o mesmo comando da seção [Instalação no Mac](#instalação-no-mac). Escolha o mesmo local da instalação anterior.
 
 O instalador cria e confere uma cópia dos dados locais antes de substituir o aplicativo; se ela falhar, interrompe a instalação. A biblioteca e a chave continuam salvas no computador. Áudios exportados fora da biblioteca e a chave no Keychain do Mac não fazem parte dessa cópia; o instalador não os modifica. A atualização ainda não é instalada automaticamente pelo botão dentro do app. Roteiros antigos que não foram guardados pela versão anterior podem não estar disponíveis no histórico local.
 
