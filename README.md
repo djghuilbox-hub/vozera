@@ -4,7 +4,7 @@
 <p align="center"><strong>Seu estúdio de narração no Windows e no Mac.</strong><br>Transforme seus roteiros em áudio com sua conta ElevenLabs.</p>
 <p align="center"><a href="#instalação-no-windows"><strong>Instalar ou atualizar no Windows</strong></a> · <a href="#instalação-no-mac"><strong>Instalar no Mac</strong></a> · <a href="#como-criar-sua-chave-da-elevenlabs"><strong>Configurar a ElevenLabs</strong></a></p>
 
-> **Já tem o Vozera?** Feche o aplicativo e seu terminal antes de atualizar. Depois, execute o mesmo comando e escolha o local da instalação anterior.
+> **Já tem o Vozera?** Para instalar a versão 0.9.4 pela primeira vez, feche o aplicativo e use o comando do seu sistema na mesma pasta da instalação anterior. Depois, as próximas atualizações poderão ser iniciadas pelo botão do aplicativo.
 
 ## Instalação no Windows
 
@@ -36,7 +36,7 @@ O comando baixa a versão mais recente disponível, inclusive versões beta, e v
 - Conferir o roteiro antes de gerar, receber alertas de repetição e acompanhar o progresso.
 - Configurar a ElevenLabs em Configurações → Plugins e diagnosticar problemas pelo botão Verificar.
 - Ver a versão instalada no cabeçalho e receber um aviso fixo quando houver uma nova versão.
-- Receber um aviso para aguardar se houver uma geração em andamento na mesma aba ao acessar a atualização.
+- Iniciar a atualização pelo aplicativo, com proteção para gerações, partes e rascunhos nas abas registradas.
 - Receber um aviso quando a aba perder a conexão com o aplicativo local.
 
 **Versão beta:** confira a narração completa antes de utilizá-la. A geração longa, especialmente no modelo v4 Turbo, ainda precisa de validação adicional. A estimativa de consumo não é uma cobrança confirmada.
@@ -59,7 +59,7 @@ curl -fsSL https://raw.githubusercontent.com/djghuilbox-hub/vozera/main/instalar
 5. O FFmpeg é necessário para juntar áudios. Se não estiver instalado, o instalador usará o Homebrew. Se o Homebrew também não estiver instalado, acesse [brew.sh](https://brew.sh/), conclua a instalação e execute o comando novamente.
 6. Abra o atalho **Vozera** na Mesa ou o arquivo `Vozera.app` na pasta `Vozera/App`. Os áudios ficam em `Vozera/Narrações`.
 
-O comando executa o script público deste repositório: use-o somente se confiar na origem. Se preferir baixar o arquivo, consulte os [instaladores para Mac](https://github.com/djghuilbox-hub/vozera/releases/tag/v0.9.3-beta).
+O comando executa o script público deste repositório: use-o somente se confiar na origem. Se preferir baixar o arquivo, consulte os [instaladores para Mac](https://github.com/djghuilbox-hub/vozera/releases/tag/v0.9.4-beta).
 
 O aplicativo para Mac **não possui assinatura de desenvolvedor nem notarização da Apple**. O macOS pode bloquear sua abertura: confira o aviso em **Ajustes do Sistema → Privacidade e Segurança** e, se confiar no arquivo, use a opção oferecida pelo sistema para abri-lo. As duas arquiteturas foram compiladas e testadas automaticamente no macOS 15; a instalação e o uso ainda precisam ser conferidos em Macs reais.
 
@@ -85,7 +85,7 @@ No Windows, feche o Vozera e seu terminal e siga o mesmo comando da seção [Ins
 
 No Mac, feche o Vozera e seu terminal e siga o mesmo comando da seção [Instalação no Mac](#instalação-no-mac). Escolha o mesmo local da instalação anterior.
 
-O instalador cria e confere uma cópia dos dados locais antes de substituir o aplicativo; se ela falhar, interrompe a instalação. A biblioteca e a chave continuam salvas no computador. Áudios exportados fora da biblioteca e a chave no Keychain do Mac não fazem parte dessa cópia; o instalador não os modifica. A atualização ainda não é instalada automaticamente pelo botão dentro do app. Roteiros antigos que não foram guardados pela versão anterior podem não estar disponíveis no histórico local.
+O instalador cria e confere uma cópia dos dados locais antes de substituir o aplicativo; se ela falhar, interrompe a instalação. A biblioteca e a chave continuam salvas no computador. Áudios exportados fora da biblioteca e a chave no Keychain do Mac não fazem parte dessa cópia; o instalador não os modifica. A partir da versão 0.9.4, clique em **Atualizar** no aplicativo para abrir o terminal e iniciar a instalação. Salve e limpe os rascunhos e as partes antes de atualizar; feche as abas antigas abertas por versões anteriores. Roteiros antigos que não foram guardados pela versão anterior podem não estar disponíveis no histórico local.
 
 ## Como criar sua chave da ElevenLabs
 
