@@ -59,7 +59,7 @@ curl -fsSL https://raw.githubusercontent.com/djghuilbox-hub/vozera/main/instalar
 5. O FFmpeg é necessário para juntar áudios. Se não estiver instalado, o instalador usará o Homebrew. Se o Homebrew também não estiver instalado, acesse [brew.sh](https://brew.sh/), conclua a instalação e execute o comando novamente.
 6. Abra o atalho **Vozera** na Mesa ou o arquivo `Vozera.app` na pasta `Vozera/App`. Os áudios ficam em `Vozera/Narrações`.
 
-O comando executa o script público deste repositório: use-o somente se confiar na origem. Se preferir baixar o arquivo, consulte os [instaladores para Mac](https://github.com/djghuilbox-hub/vozera/releases/tag/v0.9.4-beta).
+O comando executa o script público deste repositório: use-o somente se confiar na origem. Se preferir baixar o arquivo, consulte os [instaladores para Mac](https://github.com/djghuilbox-hub/vozera/releases/tag/v0.9.5-beta).
 
 O aplicativo para Mac **não possui assinatura de desenvolvedor nem notarização da Apple**. O macOS pode bloquear sua abertura: confira o aviso em **Ajustes do Sistema → Privacidade e Segurança** e, se confiar no arquivo, use a opção oferecida pelo sistema para abri-lo. As duas arquiteturas foram compiladas e testadas automaticamente no macOS 15; a instalação e o uso ainda precisam ser conferidos em Macs reais.
 
@@ -69,7 +69,7 @@ Os canais do Vozera são locais: eles organizam suas narrações, mas não se co
 
 Nas narrações recentes ou na Biblioteca, clique em **Ver roteiro** para conferir o texto e as informações da geração. Para editar e usar o roteiro novamente, clique em **Abrir no Estúdio**. Alguns registros antigos não guardaram o texto ou os identificadores de voz e modelo; nesses casos, confira ou escolha as opções antes de gerar.
 
-Cada nova geração com canal selecionado é salva dentro da pasta desse canal, em uma pasta própria com o MP3 e o roteiro TXT. Sem canal, a pasta é criada diretamente em Narrações. Os arquivos anteriores continuam nos locais onde foram salvos.
+Cada nova geração com canal selecionado é salva dentro da pasta desse canal, em uma pasta própria com o MP3 e o roteiro TXT. Ao baixar uma narração vinculada pela biblioteca, a cópia também é organizada na pasta do canal e da narração, com o roteiro quando ele estiver disponível. Sem canal, a pasta é criada diretamente em Narrações. Os arquivos anteriores continuam nos locais onde foram salvos.
 
 ## Tutorial e tags
 
