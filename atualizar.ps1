@@ -15,6 +15,13 @@
     Invoke-WebRequest -Uri $url -OutFile $zip
     if ((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash -ne $asset.digest.Substring(7)) { throw 'Verificação do instalador falhou.' }
     Expand-Archive -LiteralPath $zip -DestinationPath (Join-Path $pasta 'conteudo')
-    & powershell.exe -STA -NoProfile -ExecutionPolicy Bypass -File (Join-Path $pasta 'conteudo\Instalar.ps1')
+    if ($env:VOZERA_AUTO_DESTINO) {
+        $destino = [System.IO.Path]::GetFullPath($env:VOZERA_AUTO_DESTINO)
+        if (-not (Test-Path -LiteralPath (Join-Path $destino 'Vozera.exe') -PathType Leaf)) { throw 'Instalação existente não encontrada.' }
+        & powershell.exe -STA -NoProfile -ExecutionPolicy Bypass -File (Join-Path $pasta 'conteudo\Instalar.ps1') -Destino $destino
+    } else {
+        & powershell.exe -STA -NoProfile -ExecutionPolicy Bypass -File (Join-Path $pasta 'conteudo\Instalar.ps1')
+    }
     if ($LASTEXITCODE -ne 0) { throw 'A instalação não foi concluída. Confira a mensagem acima.' }
 }
+
